@@ -213,7 +213,8 @@ h3{
 }
 
 #skill h3 {
-  text-align: center;
+  /* text-align: center; */
+  font-weight:700;
 }
 
 #skill h1 {
@@ -252,6 +253,10 @@ h3{
 
 #skill .language .progress-bar {
   background-color: #cf9220;
+}
+
+#skill .container p{
+  text-align: center;
 }
 
 #portfolio {
