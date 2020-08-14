@@ -366,6 +366,11 @@ h3{
   color: #e67e1f;
 }
 
+#portfolio .col-md-3{
+  padding-left:0;
+  padding-right:0;
+}
+
 .circel{
   position: relative;
   color:#fff;
