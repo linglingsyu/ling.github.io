@@ -5,6 +5,8 @@
   font-family: "Roboto", "Noto Sans TC", sans-serif;
 }
 
+
+
 #navbar a {
   color: #ffffff;
   padding-bottom: 2px;
@@ -144,7 +146,7 @@ h3{
 }
 
 .timeline li:hover h6{
-  color:#290255;
+  color:#6a07db;
 }
 
 .timeline li::before {
@@ -153,13 +155,14 @@ h3{
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #973109;
   padding-left: 5px;
-  border: 2px solid #442403;
+  border: 2px solid #973109;
   position: absolute;
   left: 0;
   top: 7px;
   z-index: 999;
+  transition: transform 0.5s ease-in-out;
 }
 
 .timeline li::after {
@@ -178,21 +181,18 @@ h3{
 }
 
 .timeline li:hover::before {
-  animation: shadow 1s linear alternate infinite;
+  /* animation: shadow 1s linear alternate infinite; */
+  transform: scale(1.5)
 }
 
-@keyframes shadow {
+/* @keyframes shadow {
   from {
-    box-shadow: 0 0 5px #ff0000;
-    border: 2px solid #b4793e;
-    background-color: #000000;
+    box-shadow: 0 0 5px #d4d4d4;
   }
   to {
-    box-shadow: 0 0 3px #680496;
-    border: 2px solid #3494cc;
-    background-color: #2b2a2a;
+    box-shadow: 0 0 3px #9b9b9b;
   }
-}
+} */
 
 #study{
   background:linear-gradient(
@@ -458,6 +458,117 @@ h3{
 }
 
 
+#autobiography .btn-link{
+  color:rgb(207, 26, 231);
+}
+
+
+#autobiography h2 button{
+  font-family: "Roboto";
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#autobiography .card{
+  margin:2.5px 0;
+}
+
+#autobiography .card-header{
+  background-color: #3467c4;
+  border:none;
+  padding-right: 1rem;
+  position: relative;
+}
+
+#autobiography .card-header .icon{
+  position: absolute;
+  top:0;
+  left:-20px;
+  font-size:3rem;
+  color:#102952;
+  z-index: 999;
+}
+
+#autobiography h2 button[aria-expanded="false"] .fa-plus-circle{
+  display: inline;
+}
+#autobiography h2 button[aria-expanded="false"] .fa-minus-circle {
+  display: none;
+}
+#autobiography h2 button[aria-expanded="true"] .fa-plus-circle {
+  display: none;
+}
+#autobiography h2 button[aria-expanded="true"] .fa-minus-circle {
+  display: inline;
+}
+
+#collapseTwo .card-body h5{
+  color:#fc7a00;
+}
+
+#collapseTwo .card-body ul li,#collapseThree .card-body ul li{
+  position: relative;
+  padding:0 3%;
+}
+
+#collapseTwo .card-body ul li::before,#collapseThree .card-body ul li::before{
+  content:"×";
+  position: absolute;
+  top:5%;
+  left:-5%;
+  color:#4b4b5e;
+  font-size: 8px;
+}
+
+
+#collapseThree .cb{
+  background-color: #309edf;
+  padding:1rem;
+  border-radius: 15px;
+  margin:1rem 0;
+}
+
+#collapseThree h6{
+  color:#a85302;
+}
+
+#collapseThree h5{
+  color:#fc7a00 ;
+  text-align:center;
+}
+#collapseThree .card-body .cb-2{
+  color:#e49e36;
+  text-align: center;
+  margin-bottom: .5rem 1rem;
+}
+
+#collapseThree .cb-3{
+  margin:1rem 0;
+  padding:0 .5rem;
+}
+
+
+#autobiography .card-body p{
+  font-weight: 200;
+  color:rgb(53, 53, 53);
+}
+
+
+#autobiography .ti{
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+#autobiography h2 button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+#autobiography .card{
+  border:none;
+}
+
+
 #footer{
 background-color: darkslategrey;
 color:#fff;
@@ -569,6 +680,74 @@ button:focus{
 
 
 @media (min-width: 768px) {
+
+  #accordionExample {
+    width:80%;
+  }
+
+  #autobiography .card-body{
+    padding:1.25rem 2.25rem;
+  }
+
+  #collapseTwo h5{
+    position: relative;
+    padding:0 1rem;
+  }
+  
+  #collapseTwo .card-body h5::before{
+    content:"";
+    width:15px;
+    height:15px;
+    background-color: #ffffff;
+    border: 1px solid rgb(93, 85, 95);
+    position: absolute;
+    top:25%;
+    left:-1%;
+    border-radius: 50%;
+  }
+  #collapseTwo .card-body ul li,#collapseThree .card-body ul li{
+    position: relative;
+    padding:0 1rem;
+    margin-left:4%;
+    color:rgb(85, 85, 85);
+  }
+  #collapseTwo .card-body ul li::before{
+    content:"";
+    width:1px;
+    height:125%;
+    background-color:rgb(93, 85, 95) ;
+    position: absolute;
+    top:25%;
+    left:-4%;
+  }
+
+  #collapseThree .card-body ul li::before{
+    content:"";
+  }
+  
+  #collapseTwo .card-body ul li::after, #collapseThree .card-body ul li::after{
+    content:"";
+    width: 10px;
+    height:1px;
+    background-color:rgb(93, 85, 95) ;
+    position: absolute;
+    top:50%;
+    left:-2%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #collapseTwo .card-body ul li:hover,  #collapseThree .card-body ul li:hover{
+    color:rgb(202, 33, 146) ;
+  }
+
+  #collapseTwo .card-body ul li:hover::after,#collapseThree .card-body ul li:hover::after{
+    transform: translateX(5px);
+    height:3px;
+    background-color: rgb(202, 33, 146) ;
+  }
+
+
+
   #header::after {
     content: "";
     display: block;

@@ -16,7 +16,7 @@ function typing(){
  var typing = document.getElementById('typing');
  if (i <= str.length) {
   typing.innerHTML = str.slice(0, i++) + '_';
-  setTimeout('typing()', 150);
+  setTimeout('typing()', 50);
  }else{
   typing.innerHTML = str;
  }
