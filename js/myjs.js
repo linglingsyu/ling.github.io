@@ -62,6 +62,8 @@ window.onload = loading()
 
 
 
-
+$(".navbar-toggler").click(function(){
+  ga('send', 'event', 'Videos', 'play', 'Fall Campaign');
+})
 
 
